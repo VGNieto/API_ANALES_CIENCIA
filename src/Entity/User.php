@@ -145,7 +145,7 @@ class User implements JsonSerializable, Stringable
     {
         if (!$role instanceof Role) {
             $role = Role::from($role);
-        }
+        }        
         return match ($role) {
             Role::READER => true,
             Role::WRITER => ($this->role === Role::WRITER),
